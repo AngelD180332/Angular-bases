@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-
 import { Home } from './pages/home/home';
 import { Contact } from './pages/contact/contact';
 import { About } from './pages/about/about';
@@ -20,15 +19,19 @@ const routes: Routes = [
     component: About
   },
   {
+    path: 'posts',
+    loadChildren: () => import('./pages/posts/posts-module').then(m => m.PostsModule)
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
-
 ];
-
-
-
-
 
 @NgModule({
   declarations: [],

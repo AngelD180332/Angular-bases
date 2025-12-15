@@ -4,8 +4,6 @@ import { Home } from './home/home';
 import { About } from './about/about';
 import { Contact } from './contact/contact';
 
-
-
 @NgModule({
   declarations: [
     Home,
@@ -17,7 +15,6 @@ import { Contact } from './contact/contact';
     About,
     Contact
   ],
-
   imports: [
     CommonModule
   ]
